@@ -1,25 +1,17 @@
-/* estilos.css: hoja de estilos de todo el sitio.
-   Los colores y las tipografías están en variables (:root). Para cambiar la paleta
-   o las fuentes alcanza con modificar esos valores, el resto del archivo no se toca.
-
-   Inspiración: la camiseta celeste de la Selección, con el número y el nombre en azul marino.
-   Por eso los títulos usan una tipografía condensada, parecida al lettering de una camiseta. */
-
 :root {
     --fondo: #FFFFFF;
     --superficie: #EAF3FB;
     --texto: #10233F;
     --texto-suave: #4A5B73;
-    --principal: #75AADB;        /* header y footer: el celeste de la camiseta */
-    --sobre-principal: #0B1D33;  /* texto sobre header y footer: el azul marino de los números */
-    --acento: #D4A82A;           /* el dorado de la medalla: botones y franjas */
-    --sobre-acento: #0B1D33;     /* texto sobre el acento */
+    --principal: #75AADB;
+    --sobre-principal: #0B1D33;
+    --acento: #D4A82A;
+    --sobre-acento: #0B1D33;
     --borde: #C9D8E8;
     --fuente: "Barlow", Arial, sans-serif;
     --fuente-titulos: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
 }
 
-/* Base */
 * {
     box-sizing: border-box;
 }
@@ -42,7 +34,6 @@ a {
     color: var(--texto);
 }
 
-/* Foco visible para navegar con teclado */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
@@ -50,8 +41,6 @@ input:focus-visible {
     outline-offset: 2px;
 }
 
-/* Encabezado y menú: flexbox para poner el logo a la izquierda y el menú a la derecha.
-   La franja dorada de abajo recuerda a la medalla. */
 header {
     background-color: var(--principal);
     color: var(--sobre-principal);
@@ -100,7 +89,6 @@ nav a[aria-current="page"] {
     border-bottom-color: var(--sobre-principal);
 }
 
-/* Contenido principal */
 main {
     max-width: 960px;
     margin: 0 auto;
@@ -143,7 +131,6 @@ h4 {
     margin: 1rem 0 0.25rem;
 }
 
-/* Presentación de la página de inicio */
 #inicio {
     background-color: var(--superficie);
     border-radius: 8px;
@@ -157,7 +144,6 @@ h4 {
     margin-top: 1.25rem;
 }
 
-/* Botones */
 .boton {
     display: inline-block;
     background-color: var(--acento);
@@ -191,7 +177,6 @@ h4 {
     border-color: var(--texto);
 }
 
-/* Línea de tiempo: lista ordenada con una línea dorada a la izquierda */
 .linea-tiempo {
     list-style: none;
     margin: 0 0 1rem;
@@ -203,7 +188,6 @@ h4 {
     margin-bottom: 1.25rem;
 }
 
-/* Los años usan la misma tipografía que los números de una camiseta */
 .anio {
     display: block;
     font-family: var(--fuente-titulos);
@@ -212,7 +196,6 @@ h4 {
     line-height: 1.1;
 }
 
-/* Torneos de la página de historia */
 .torneo {
     border-top: 1px solid var(--borde);
     padding: 1.25rem 0;
@@ -241,7 +224,6 @@ h4 {
     color: var(--fondo);
 }
 
-/* Buscador de jugadores */
 .buscador {
     margin-bottom: 1.5rem;
 }
@@ -270,7 +252,6 @@ h4 {
     color: var(--texto-suave);
 }
 
-/* Tarjetas de jugadores y cuerpo técnico: grid que acomoda las columnas según el ancho */
 .lista-tarjetas {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -291,7 +272,6 @@ h4 {
     font-size: 1rem;
 }
 
-/* El botón queda siempre abajo: así las tarjetas de una misma fila tienen el mismo tamaño */
 .tarjeta .boton-detalle {
     margin-top: auto;
     align-self: flex-start;
@@ -306,31 +286,20 @@ h4 {
     font-weight: 600;
 }
 
-/* Las iniciales van como el estampado de una camiseta: azul marino sobre celeste.
-   Reemplazan a la foto hasta que haya una. */
-.inicial {
-    width: 4rem;
-    height: 4rem;
+.foto-jugador {
+    display: block;
+    width: 6rem;
+    height: 6rem;
     margin-bottom: 0.75rem;
     border-radius: 6px;
-    background-color: var(--principal);
-    color: var(--sobre-principal);
-    font-family: var(--fuente-titulos);
-    font-size: 2.25rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover;
 }
 
-/* Eventos de la página de legado */
 .evento {
     border-top: 1px solid var(--borde);
     padding: 1.25rem 0;
 }
 
-/* Galería de fotos */
 .galeria {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -341,7 +310,8 @@ h4 {
     margin: 0;
 }
 
-.galeria img {
+.galeria img,
+.galeria video {
     display: block;
     width: 100%;
     border-radius: 8px;
@@ -365,7 +335,6 @@ figcaption {
     justify-content: center;
 }
 
-/* Datos rápidos de la página de inicio: número grande al estilo de un dorsal */
 .datos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -391,7 +360,6 @@ figcaption {
     line-height: 1;
 }
 
-/* Fichas de jugadores: la lista de datos que se abre con el botón */
 .ficha dl {
     margin: 0.75rem 0 0;
     font-size: 1rem;
@@ -410,7 +378,6 @@ figcaption {
     margin: 0.1rem 0 0;
 }
 
-/* Tabla de logros: el contenedor permite desplazar la tabla en pantallas chicas sin romper la página */
 .tabla-contenedor {
     overflow-x: auto;
 }
@@ -455,32 +422,34 @@ figcaption {
     white-space: nowrap;
 }
 
-/* Fila de los resultados más importantes: franja dorada a la izquierda (además del texto, no solo color) */
 .tabla-logros .destacado th {
     border-left: 4px solid var(--acento);
 }
 
-/* Imágenes y videos que acompañan al texto */
 .figura {
     margin: 1rem 0;
     max-width: 640px;
 }
 
 .figura img,
-.figura video {
+.figura video,
+.figura iframe {
     display: block;
     width: 100%;
     border-radius: 8px;
 }
 
-/* Aclaración debajo del nombre del torneo en la tabla de logros */
+.figura iframe {
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
 .nota {
     display: block;
     color: var(--texto-suave);
     font-size: 0.9375rem;
 }
 
-/* Fuentes */
 .fuentes {
     font-size: 1rem;
 }
@@ -489,7 +458,6 @@ figcaption {
     margin-bottom: 0.4rem;
 }
 
-/* Pie de página */
 footer {
     background-color: var(--principal);
     color: var(--sobre-principal);
@@ -503,7 +471,6 @@ footer p {
     margin: 0;
 }
 
-/* Pantallas chicas: el header se apila y se achican los márgenes */
 @media (max-width: 600px) {
     header {
         flex-direction: column;
@@ -527,7 +494,20 @@ footer p {
     }
 }
 
-/* Va al final para que el atributo hidden siempre oculte, aunque otra regla defina display (como .tarjeta) */
+.figura-vertical {
+    max-width: 360px;
+}
+
+.camisetas {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 480px;
+}
+
+.camisetas img {
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+}
+
 [hidden] {
     display: none;
 }
