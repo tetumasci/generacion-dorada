@@ -3,38 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generacion Dorada</title>
+    <meta name="description" content="La Generación Dorada del básquet argentino: historia, logros, jugadores y legado del equipo que ganó el oro olímpico en Atenas 2004.">
+    <title>Generación Dorada del básquet argentino</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/estilos.css">
+    <script src="./js/app.js" defer></script>
 </head>
 <body>
-    
 
+    <!-- Encabezado y menú: es igual en todas las páginas, cambia solo cuál link tiene aria-current -->
     <header>
-        <p>Generación Dorada</p>
-        <nav>
-            
+        <a class="logo" href="index.html">Generación Dorada</a>
+        <nav aria-label="Principal">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
                 <li><a href="./pages/historia.html">Historia</a></li>
+                <li><a href="./pages/logros.html">Logros</a></li>
                 <li><a href="./pages/jugadores.html">Jugadores</a></li>
-                <li><a href="./pages/legado.html">Logros</a></li>
+                <li><a href="./pages/legado.html">Legado</a></li>
                 <li><a href="./pages/galeria.html">Galería</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-            <section id = "inicio"><!--Explicacion de que es la generacion dorada, breve resumen tambien de quienes fueron y porque se los llama asi -->
-                <h1>Generación Dorada</h1>
-                <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </section>
 
-            <section id = "linea-tiempo">
-                <h2>Linea de Tiempo</h2> <!--Aca va la linea de tiempo de los torneos y resumen de logros obtenidos -->
-                <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </section>
+        <!-- Qué es la Generación Dorada y por qué se la llama así -->
+        <section id="inicio">
+            <h1>Generación Dorada del básquet argentino</h1>
+            <p>La Generación Dorada fue la selección argentina de básquet que, desde comienzos de los años 2000, llevó al país a la élite mundial: campeona de América en 2001, subcampeona del Mundo en 2002, campeona olímpica en Atenas 2004 y medallista de bronce en Beijing 2008.</p>
+            <p>Su nombre resume esa época. En Atenas ganó el primer oro olímpico en la historia del básquet argentino, con Manu Ginóbili, Luis Scola, Andrés Nocioni y Fabricio Oberto entre sus figuras. En el camino venció dos veces a Estados Unidos, que hasta ese momento parecía imbatible cuando jugaba con estrellas de la NBA.</p>
+            <div class="acciones">
+                <a class="boton" href="./pages/historia.html">Ver la historia</a>
+                <a class="boton boton-secundario" href="./pages/jugadores.html">Conocer a los jugadores</a>
+            </div>
+        </section>
+
+        <!-- Cuatro números para entrar en tema; el desarrollo está en Historia y Logros -->
+        <section id="datos">
+            <h2>La Generación Dorada en cuatro números</h2>
+            <ul class="datos">
+                <li class="dato">
+                    <span class="dato-numero">12</span>
+                    campeones olímpicos en Atenas 2004
+                </li>
+                <li class="dato">
+                    <span class="dato-numero">58</span>
+                    partidos seguidos sin perder tenía Estados Unidos con jugadores de la NBA, hasta que Argentina lo venció en 2002
+                </li>
+                <li class="dato">
+                    <span class="dato-numero">2</span>
+                    victorias sobre Estados Unidos con jugadores de la NBA: Mundial 2002 y Atenas 2004
+                </li>
+                <li class="dato">
+                    <span class="dato-numero">4</span>
+                    medallas en Mundiales y Juegos Olímpicos: plata en 2002, oro en 2004, bronce en 2008 y plata en 2019
+                </li>
+            </ul>
+        </section>
+
+        <!-- Resumen corto; el desarrollo de cada torneo está en historia.html -->
+        <section id="linea-tiempo">
+            <h2>Línea de tiempo</h2>
+            <ol class="linea-tiempo">
+                <li>
+                    <span class="anio">2001</span>
+                    Campeonato FIBA Américas en Neuquén. Argentina gana el título continental y se clasifica al Mundial.
+                </li>
+                <li>
+                    <span class="anio">2002</span>
+                    Mundial de Indianápolis. Vence a Estados Unidos y es subcampeón del Mundo: pierde la final con Yugoslavia en tiempo suplementario.
+                </li>
+                <li>
+                    <span class="anio">2004</span>
+                    Juegos Olímpicos de Atenas. Empieza con la palomita de Ginóbili ante Serbia y Montenegro y termina con la medalla de oro, la primera del básquet argentino.
+                </li>
+                <li>
+                    <span class="anio">2006</span>
+                    Mundial de Japón. Cuarto puesto, tras perder el partido por el bronce con Estados Unidos.
+                </li>
+                <li>
+                    <span class="anio">2008</span>
+                    Juegos Olímpicos de Beijing. Medalla de bronce tras vencer a Lituania.
+                </li>
+                <li>
+                    <span class="anio">2011</span>
+                    Campeonato FIBA Américas en Mar del Plata. Argentina vuelve a ser campeón de América.
+                </li>
+                <li>
+                    <span class="anio">2012</span>
+                    Juegos Olímpicos de Londres. Cuarto puesto, con un último partido por el bronce que se escapó por cuatro puntos.
+                </li>
+                <li>
+                    <span class="anio">2019</span>
+                    Mundial de China. Subcampeón del Mundo otra vez, con Luis Scola todavía en el plantel.
+                </li>
+            </ol>
+            <p><a href="./pages/historia.html">Leer la historia completa</a></p>
+        </section>
+
+        <!-- Acceso al resto del sitio -->
+        <section id="explorar">
+            <h2>Qué vas a encontrar en el sitio</h2>
+            <div class="lista-tarjetas">
+                <article class="tarjeta">
+                    <h3>Historia</h3>
+                    <p>El básquet argentino antes de 2002, el mito de Estados Unidos y cada torneo, uno por uno.</p>
+                    <p><a href="./pages/historia.html">Ir a Historia</a></p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Logros</h3>
+                    <p>La tabla completa de medallas, los premios individuales y los récords.</p>
+                    <p><a href="./pages/logros.html">Ir a Logros</a></p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Jugadores</h3>
+                    <p>Una ficha por cada uno de los doce campeones y por los dos entrenadores.</p>
+                    <p><a href="./pages/jugadores.html">Ir a Jugadores</a></p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Legado</h3>
+                    <p>Retiros, homenajes y los eventos del reencuentro por los 20 años del oro.</p>
+                    <p><a href="./pages/legado.html">Ir a Legado</a></p>
+                </article>
+            </div>
+        </section>
+
     </main>
-
 
     <footer>
         <p>&copy; 2026 Generación Dorada. Todos los derechos reservados.</p>

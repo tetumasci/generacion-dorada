@@ -1,39 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Galería de fotos propias de los homenajes a la Generación Dorada: la exposición y el partido por los 20 años de Atenas 2004.">
+    <title>Galería | Generación Dorada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/app.js" defer></script>
 </head>
 <body>
+
     <header>
-        <p>Generación Dorada</p>
-        <nav>
-            
+        <a class="logo" href="../index.html">Generación Dorada</a>
+        <nav aria-label="Principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="historia.html">Historia</a></li>
+                <li><a href="logros.html">Logros</a></li>
                 <li><a href="jugadores.html">Jugadores</a></li>
-                <li><a href="legado.html">Logros</a></li>
-                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="legado.html">Legado</a></li>
+                <li><a href="galeria.html" aria-current="page">Galería</a></li>
             </ul>
         </nav>
     </header>
 
-     <main>
- 
-    <section id="galeria">
-      <h1>Galería</h1>
-      <p>
-        <!-- aca van las fotos de la generacion dorada, dando una vista general de los momentos más importantes -->
-      </p>
-     
-    </section>
- 
+    <main>
+
+        <section id="galeria">
+            <h1>Galería</h1>
+            <p>Fotos propias de los homenajes a la Generación Dorada a los que asistí.</p>
+        </section>
+
+        <!--
+            Cómo cargar una foto: guardala en la carpeta img/ y reemplazá el div "foto-pendiente" por
+            <img src="../img/museo-01.jpg" alt="Descripción de lo que se ve en la foto">
+            El alt tiene que describir la imagen, sin escribir "foto" ni "imagen".
+        -->
+        <section id="galeria-exposicion">
+            <h2>Exposición homenaje</h2>
+            <div class="galeria">
+                <figure>
+                    <div class="foto-pendiente">Foto pendiente</div>
+                    <figcaption>Descripción de la foto de la exposición.</figcaption>
+                </figure>
+                <figure>
+                    <div class="foto-pendiente">Foto pendiente</div>
+                    <figcaption>Descripción de la foto de la exposición.</figcaption>
+                </figure>
+                <figure>
+                    <div class="foto-pendiente">Foto pendiente</div>
+                    <figcaption>Descripción de la foto de la exposición.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="galeria-partido">
+            <h2>Partido homenaje, 2 de noviembre de 2024</h2>
+            <div class="galeria">
+                <figure>
+                    <div class="foto-pendiente">Foto pendiente</div>
+                    <figcaption>Descripción de la foto del partido.</figcaption>
+                </figure>
+                <figure>
+                    <div class="foto-pendiente">Foto pendiente</div>
+                    <figcaption>Descripción de la foto del partido.</figcaption>
+                </figure>
+                <figure>
+                    <div class="foto-pendiente">Foto pendiente</div>
+                    <figcaption>Descripción de la foto del partido.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
     <footer>
         <p>&copy; 2026 Generación Dorada. Todos los derechos reservados.</p>
-        
-  </main>
+    </footer>
+
 </body>
 </html>

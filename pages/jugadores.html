@@ -3,39 +3,408 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jugadores</title>
+    <meta name="description" content="Fichas de los doce jugadores y los dos entrenadores de la Generación Dorada: clubes, títulos, premios individuales y trayectoria en la Selección.">
+    <title>Jugadores | Generación Dorada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/app.js" defer></script>
 </head>
 <body>
+
     <header>
-        <p>Generación Dorada</p>
-        <nav>
-            
+        <a class="logo" href="../index.html">Generación Dorada</a>
+        <nav aria-label="Principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="historia.html">Historia</a></li>
-                <li><a href="jugadores.html">Jugadores</a></li>
-                <li><a href="legado.html">Logros</a></li>
+                <li><a href="logros.html">Logros</a></li>
+                <li><a href="jugadores.html" aria-current="page">Jugadores</a></li>
+                <li><a href="legado.html">Legado</a></li>
                 <li><a href="galeria.html">Galería</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+
         <section id="jugadores">
             <h1>Jugadores de la Generación Dorada</h1>
-            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <!--Aca van las futuras cards de los jugadores, dando informacion sobre rol, estadisticas, clubes,etc.-->
+            <p>Los doce jugadores que ganaron la medalla de oro en Atenas 2004, con su recorrido por clubes de Argentina, Europa y la NBA, los títulos que ganaron y sus premios individuales. Tocá «Ver detalle» para abrir la ficha completa de cada uno. Podés buscar por nombre o apodo.</p>
+
+            <!-- Buscador: filtra las fichas mientras se escribe (evento input, ver js/app.js) -->
+            <div class="buscador">
+                <label for="buscador">Buscar jugador</label>
+                <input type="search" id="buscador" placeholder="Por ejemplo: Ginóbili">
+                <p id="resultado-busqueda" aria-live="polite">Mostrando 12 de 12 jugadores.</p>
+            </div>
+
+            <!-- Este div solo agrupa las fichas para ponerlas en grilla (ver .lista-tarjetas en el CSS).
+                 Cada ficha es un article porque se entiende sola. El botón muestra u oculta los datos completos (js/app.js);
+                 esos datos son una lista de descripción: dl (lista), dt (término) y dd (descripción). -->
+            <div class="lista-tarjetas">
+
+                <article class="tarjeta tarjeta-jugador ficha">
+                    <div class="inicial" aria-hidden="true">EG</div>
+                    <h3>Emanuel «Manu» Ginóbili</h3>
+                    <p class="posicion">Escolta</p>
+                    <p>El jugador más ganador de la generación: campeón de Europa, de la NBA y de los Juegos Olímpicos. Autor de la palomita más famosa del básquet argentino.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-ginobili">Ver detalle</button>
+                    <div id="ficha-ginobili" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>28 de julio de 1977, en Bahía Blanca.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Andino de La Rioja (1995–96), Estudiantes de Bahía Blanca (1996–98), Viola Reggio Calabria (1998–2000), Kinder Bologna (2000–02) y San Antonio Spurs (2002–18).</dd>
+                            <dt>Títulos</dt>
+                            <dd>Euroliga y liga italiana en 2001, Copa de Italia en 2001 y 2002, y cuatro anillos de la NBA con los Spurs (2003, 2005, 2007 y 2014).</dd>
+                            <dt>Premios</dt>
+                            <dd>Mejor jugador de la final de la Euroliga 2001, mejor jugador de la liga italiana en 2001 y 2002, mejor sexto hombre de la NBA en 2008, All-Star en 2005 y 2011, y mejor jugador del torneo olímpico de Atenas 2004.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Oro en Atenas 2004 y plata en el Mundial 2002.</dd>
+                            <dt>La palomita</dt>
+                            <dd>El 15 de agosto de 2004, en el debut olímpico contra Serbia y Montenegro, Argentina perdía 82 a 81 y quedaban menos de cuatro segundos. Nocioni sacó, Montecchia llevó la pelota y se la pasó a Ginóbili, que tiró una palomita contra el tablero y ganó el partido 83 a 82. Mirá la <a href="historia.html#palomita">jugada en Historia</a>.</dd>
+                            <dt>Después</dt>
+                            <dd>Se retiró el 27 de agosto de 2018. Los Spurs retiraron su camiseta número 20 el 28 de marzo de 2019 y en 2022 entró al Salón de la Fama del Básquet.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="tarjeta tarjeta-jugador ficha">
+                    <div class="inicial" aria-hidden="true">LS</div>
+                    <h3>Luis Scola</h3>
+                    <p class="posicion">Ala-pívot</p>
+                    <p>El goleador histórico de la Selección en los Mundiales y el que más tiempo siguió: jugó hasta los 41 años.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-scola">Ver detalle</button>
+                    <div id="ficha-scola" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>30 de abril de 1980, en Buenos Aires.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Ferro (1995–98), Tau Cerámica o Baskonia (1998–2007), Houston Rockets (2007–12), Phoenix Suns, Indiana Pacers, Toronto Raptors, Brooklyn Nets, Shanxi y Shanghai Sharks en China, Olimpia Milano (2019–20) y Varese (2020–21).</dd>
+                            <dt>Títulos</dt>
+                            <dd>Liga española en 2002 y Copa del Rey en 2002, 2004 y 2006.</dd>
+                            <dt>Premios</dt>
+                            <dd>Mejor jugador de la liga española en 2005 y 2007, primer quinteto de la Euroliga en 2006 y 2007, primer quinteto de novatos de la NBA en 2008 y cuatro veces mejor jugador del Campeonato FIBA Américas.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Oro en Atenas 2004, bronce en Beijing 2008, plata en los Mundiales de 2002 y 2019, y oro en los Panamericanos de 2019.</dd>
+                            <dt>Después</dt>
+                            <dd>Se retiró en 2021: su último partido fue en los Juegos Olímpicos de Tokio, donde recibió una ovación de pie. Baskonia retiró su camiseta número 4 el 3 de noviembre de 2023.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="tarjeta tarjeta-jugador ficha">
+                    <div class="inicial" aria-hidden="true">AN</div>
+                    <h3>Andrés «Chapu» Nocioni</h3>
+                    <p class="posicion">Alero</p>
+                    <p>Garra y defensa: fue el motor emocional del equipo, sacó de banda en la palomita de Ginóbili y terminó su carrera campeón de Europa.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-nocioni">Ver detalle</button>
+                    <div id="ficha-nocioni" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>30 de noviembre de 1979, en Santa Fe.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Racing de Avellaneda, Olimpia de Venado Tuerto, Independiente de General Pico, Baskonia (1999–2000, 2001–04 y 2012–14), Manresa, Chicago Bulls (2004–09), Sacramento Kings, Philadelphia 76ers y Real Madrid (2014–17).</dd>
+                            <dt>Títulos</dt>
+                            <dd>Euroliga e Intercontinental en 2015, liga española en 2002, 2015 y 2016, y cinco Copas del Rey.</dd>
+                            <dt>Premios</dt>
+                            <dd>Mejor jugador de la Final Four de la Euroliga 2015, mejor jugador de la liga española en 2004 y jugador del año de los Chicago Bulls en 2005–06.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Oro en Atenas 2004, bronce en Beijing 2008, plata en el Mundial 2002, oro en el Campeonato FIBA Américas de 2001 y 2011 y plata en 2015.</dd>
+                            <dt>Después</dt>
+                            <dd>Anunció su retiro el 3 de abril de 2017. La Confederación Argentina retiró su camiseta número 13 el 26 de febrero de 2018 y más tarde colaboró en el cuerpo técnico de la Selección.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="tarjeta tarjeta-jugador ficha">
+                    <div class="inicial" aria-hidden="true">FO</div>
+                    <h3>Fabricio Oberto</h3>
+                    <p class="posicion">Pívot</p>
+                    <p>Pívot de oficio, campeón de la NBA con San Antonio Spurs en 2007.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-oberto">Ver detalle</button>
+                    <div id="ficha-oberto" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>21 de marzo de 1975, en Las Varillas, Córdoba.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Atenas de Córdoba (1993–98), Olympiacos (1998–99), Tau Cerámica (2000–02), Pamesa Valencia (2002–05), San Antonio Spurs (2005–09), Washington Wizards, Portland Trail Blazers y de nuevo Atenas en 2013.</dd>
+                            <dt>Títulos</dt>
+                            <dd>Liga Nacional en 1998, Liga Sudamericana en 1997 y 1998, liga española y Copa del Rey en 2002, EuroCup en 2003 y NBA en 2007.</dd>
+                            <dt>Premios</dt>
+                            <dd>Mejor jugador de la Liga Nacional y de sus finales en 1998, mejor jugador de la Liga Sudamericana en 1998 y campeón del concurso de volcadas de la Liga Nacional en 1995.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Oro en Atenas 2004, bronce en Beijing 2008, plata en el Mundial 2002, oro en los Panamericanos de 1995 y oro en el Campeonato FIBA Américas de 2001 y 2011.</dd>
+                            <dt>Después</dt>
+                            <dd>Se retiró el 4 de noviembre de 2010 por un problema cardíaco, pero volvió para el torneo de 2011 con la Selección. Entró al Salón de la Fama de la FIBA en 2019.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="tarjeta tarjeta-jugador ficha">
+                    <div class="inicial" aria-hidden="true">JS</div>
+                    <h3>Juan Ignacio «Pepe» Sánchez</h3>
+                    <p class="posicion">Base</p>
+                    <p>El cerebro del equipo y el primer argentino que jugó en la NBA.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-sanchez">Ver detalle</button>
+                    <div id="ficha-sanchez" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>8 de mayo de 1977, en Bahía Blanca.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Estudiantes de Bahía Blanca (1995–96), Universidad de Temple en Estados Unidos (1996–2000), Philadelphia 76ers, Atlanta Hawks, Panathinaikos (2001–02), Detroit Pistons, Etosa Alicante, Unicaja Málaga (2004–07), Barcelona (2007–08), Real Madrid (2008–09) y Bahía Basket (2010–13).</dd>
+                            <dt>Títulos</dt>
+                            <dd>Euroliga en 2002, Copa del Rey en 2005 y liga española en 2006.</dd>
+                            <dt>Premios</dt>
+                            <dd>Mejor jugador de la Atlantic 10 en 2000 y elegido en el tercer equipo All-American del básquet universitario.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Oro en Atenas 2004 y plata en el Mundial 2002.</dd>
+                            <dt>Después</dt>
+                            <dd>Ideó el Dow Center, un complejo deportivo de Bahía Blanca.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="tarjeta tarjeta-jugador ficha">
+                    <div class="inicial" aria-hidden="true">AM</div>
+                    <h3>Alejandro «Puma» Montecchia</h3>
+                    <p class="posicion">Base</p>
+                    <p>Fue figura en la final ante Italia en Atenas 2004 y dio el pase de la palomita de Ginóbili ante Serbia y Montenegro.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-montecchia">Ver detalle</button>
+                    <div id="ficha-montecchia" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>1 de enero de 1972, en Bahía Blanca.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Olimpia de Venado Tuerto (1994–98), Boca Juniors (1998–99), Viola Reggio Calabria (1999–2002), Pamesa Valencia (2002–05), Armani Jeans Milano (2006) y Regatas Corrientes (2006–09).</dd>
+                            <dt>Títulos</dt>
+                            <dd>Liga Nacional y Liga Sudamericana en 1996, y EuroCup en 2003.</dd>
+                            <dt>Premios</dt>
+                            <dd>Mejor jugador de la Liga Sudamericana en 2008.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Oro en Atenas 2004.</dd>
+                            <dt>Después</dt>
+                            <dd>Dejó de jugar en 2009.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="tarjeta tarjeta-jugador ficha">
+                    <div class="inicial" aria-hidden="true">CD</div>
+                    <h3>Carlos Delfino</h3>
+                    <p class="posicion">Escolta-alero</p>
+                    <p>El más joven del plantel de Atenas y el último en dejar de jugar.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-delfino">Ver detalle</button>
+                    <div id="ficha-delfino" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>29 de agosto de 1982, en Santa Fe.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Unión de Santa Fe, Viola Reggio Calabria (2000–02), Fortitudo Bologna (2002–04), Detroit Pistons (2004–07), Toronto Raptors (2007–08), Khimki (2008–09), Milwaukee Bucks (2009–12), Houston Rockets (2012–13), Boca, Baskonia, Torino, Pesaro (2020–23) y Cento (2023–25).</dd>
+                            <dt>Draft</dt>
+                            <dd>Fue elegido número 25 del draft de la NBA de 2003 por Detroit Pistons.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Oro en Atenas 2004, bronce en Beijing 2008 y oro en el Campeonato FIBA Américas de 2011.</dd>
+                            <dt>Después</dt>
+                            <dd>Anunció su retiro el 8 de octubre de 2025, después de más de veinte años de carrera profesional.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="tarjeta tarjeta-jugador ficha">
+                    <div class="inicial" aria-hidden="true">HS</div>
+                    <h3>Hugo Sconochini</h3>
+                    <p class="posicion">Escolta-alero y capitán</p>
+                    <p>El capitán del equipo: Rubén Magnano lo eligió para ese rol en el Premundial 2001, el Mundial 2002 y los Juegos de Atenas 2004.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-sconochini">Ver detalle</button>
+                    <div id="ficha-sconochini" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>10 de abril de 1971, en Cañada de Gómez, Santa Fe.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Sport Club Cañadense, Reggio Calabria (1990–93), Olimpia Milano (1993–95 y 2002–04), Roma, Panathinaikos (1996–97), Kinder Bologna (1997–2001), Tau Cerámica (2001–02) y Lottomatica Roma (2004–06). Siguió jugando en Italia hasta 2012.</dd>
+                            <dt>Títulos</dt>
+                            <dd>Copa Intercontinental en 1996, Euroliga en 1998 y 2001, liga italiana en 1998 y 2001, Copa de Italia en 1999 y 2001, y liga española y Copa del Rey en 2002.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Oro en Atenas 2004, plata en el Mundial 2002, y oro en el Campeonato FIBA Américas de 2001.</dd>
+                            <dt>Un dato</dt>
+                            <dd>Contó que, por la madurez del grupo, ese equipo no necesitaba que nadie impusiera reglas. Después de 2002 había pensado en dejar la Selección, pero sus compañeros y Magnano lo convencieron de seguir hasta Atenas.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="tarjeta tarjeta-jugador ficha">
+                    <div class="inicial" aria-hidden="true">WH</div>
+                    <h3>Walter Herrmann</h3>
+                    <p class="posicion">Alero</p>
+                    <p>Anotador y competitivo: jugó en la NBA y siguió en actividad hasta 2019.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-herrmann">Ver detalle</button>
+                    <div id="ficha-herrmann" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>26 de junio de 1979, en Venado Tuerto, Santa Fe.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Olimpia de Venado Tuerto (1996–2000), Atenas de Córdoba (2000–02, 2013–14 y 2018–19), Fuenlabrada, Unicaja Málaga (2003–06), Charlotte Bobcats (2006–07), Detroit Pistons (2007–09), Caja Laboral (2009–10), Flamengo (2014–15), San Lorenzo y Obras Sanitarias.</dd>
+                            <dt>Títulos</dt>
+                            <dd>Liga española en 2006 y 2010, Copa del Rey en 2005, Liga Nacional en 2002 y 2016, liga brasileña en 2015 y Copa Intercontinental en 2014.</dd>
+                            <dt>Premios</dt>
+                            <dd>Mejor jugador de la liga española en 2003, mejor jugador de la Liga Nacional en 2001 y 2014, y segundo quinteto de novatos de la NBA en 2007.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Oro en Atenas 2004 y campeón sudamericano en 2001 y 2004.</dd>
+                            <dt>Después</dt>
+                            <dd>Su carrera como jugador llegó hasta 2019.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="tarjeta tarjeta-jugador ficha">
+                    <div class="inicial" aria-hidden="true">RW</div>
+                    <h3>Rubén «Colo» Wolkowyski</h3>
+                    <p class="posicion">Pívot</p>
+                    <p>Pívot que jugó en la NBA con Seattle SuperSonics y Boston Celtics.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-wolkowyski">Ver detalle</button>
+                    <div id="ficha-wolkowyski" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>30 de septiembre de 1973, en Castelli, Chaco.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Estudiantes de Olavarría, Quilmes de Mar del Plata, Boca Juniors (1997–99), Seattle SuperSonics (2000–01), CSKA Moscú, Boston Celtics (2002), Tau Cerámica (2003), Olympiacos (2003–04) y Khimki (2004–07). Después volvió a jugar en Argentina hasta 2015.</dd>
+                            <dt>Premios</dt>
+                            <dd>Mejor jugador de la Liga Nacional y de sus finales en 2000. En 2010 metió 45 puntos en la final de la Copa Argentina.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Oro en los Panamericanos de 1995 y oro en Atenas 2004.</dd>
+                            <dt>En la NBA</dt>
+                            <dd>Jugó 41 partidos entre Seattle y Boston.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="tarjeta tarjeta-jugador ficha">
+                    <div class="inicial" aria-hidden="true">GF</div>
+                    <h3>Gabriel «Gaby» Fernández</h3>
+                    <p class="posicion">Ala-pívot</p>
+                    <p>Ala-pívot que ganó la liga española en 2002 y compartió el oro de Atenas 2004.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-fernandez">Ver detalle</button>
+                    <div id="ficha-fernandez" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>23 de octubre de 1976, en Lomas de Zamora.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Ferro (1995–96), Boca Juniors (1996–2000), Estudiantes de Olavarría, Le Havre, Tau Cerámica (2002), Fórum Filatélico, Lleida, Varese (2005–08), Obras Sanitarias, Lanús, Independiente de Avellaneda y Peñarol de Mar del Plata (2013–15).</dd>
+                            <dt>Títulos</dt>
+                            <dd>Liga española y Copa del Rey en 2002, Campeonato Panamericano de Clubes en 2000, Liga Sudamericana en 2001 y Liga Nacional en 2001 y 2014.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Oro en Atenas 2004, plata en el Mundial 2002 y oro en el Campeonato FIBA Américas de 2001.</dd>
+                            <dt>Después</dt>
+                            <dd>Su carrera llegó hasta 2018.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="tarjeta tarjeta-jugador ficha">
+                    <div class="inicial" aria-hidden="true">LG</div>
+                    <h3>Leonardo «Leo» Gutiérrez</h3>
+                    <p class="posicion">Ala-pívot</p>
+                    <p>Una de las grandes figuras de la Liga Nacional: ganó diez títulos.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-gutierrez">Ver detalle</button>
+                    <div id="ficha-gutierrez" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>16 de mayo de 1978, en Marcos Juárez, Córdoba.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Olimpia de Venado Tuerto (1993–98), Atenas de Córdoba (1998–2002 y 2008–09), Obras Sanitarias, Ben Hur de Rafaela, Boca Juniors (2006–08) y Peñarol de Mar del Plata (2009–17).</dd>
+                            <dt>Títulos</dt>
+                            <dd>Diez ligas nacionales entre 1996 y 2014, Liga Sudamericana en 1996 y 2006 y Liga de las Américas en 2010.</dd>
+                            <dt>Premios</dt>
+                            <dd>Mejor jugador de la Liga Nacional en 2005, 2006, 2008 y 2010, y mejor jugador de las finales en 2005, 2007, 2010 y 2011.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Oro en Atenas 2004, bronce en Beijing 2008, plata en el Mundial 2002 y oro en el Campeonato FIBA Américas de 2001 y 2011.</dd>
+                            <dt>Después</dt>
+                            <dd>Se retiró en 2017 y desde 2019 es entrenador de Ciclista Olímpico.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+            </div>
         </section>
 
         <section id="cuerpo-tecnico">
-            <h2>Cuerpo Técnico</h2> <!--Aca van las futuras cards del cuerpo tecnico, dando informacion sobre su rol, experiencia, etc.-->
-            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2>Cuerpo técnico</h2>
+            <div class="lista-tarjetas">
+
+                <article class="tarjeta ficha">
+                    <div class="inicial" aria-hidden="true">RM</div>
+                    <h3>Rubén Magnano</h3>
+                    <p class="posicion">Entrenador</p>
+                    <p>Dirigió a la Selección campeona olímpica en Atenas 2004.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-magnano">Ver detalle</button>
+                    <div id="ficha-magnano" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>9 de octubre de 1954, en Villa María, Córdoba.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Atenas de Córdoba (en tres etapas), Luz y Fuerza Posadas, Boca Juniors, Pallacanestro Varese (2005–07) y Sevilla (2007–08).</dd>
+                            <dt>Títulos</dt>
+                            <dd>Cuatro ligas nacionales (1992, 1998, 1999 y 2009) y la Liga Sudamericana de 1997 y 1998.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Dirigió a Argentina entre 2001 y 2004: oro en el Campeonato FIBA Américas 2001, plata en el Mundial 2002 y oro en Atenas 2004. Después dirigió a Brasil (2010–16) y a Uruguay.</dd>
+                            <dt>Honores</dt>
+                            <dd>Premio Konex de Platino en 2010 como mejor entrenador de la década e ingreso al Salón de la Fama de la FIBA en 2021. Anunció su retiro como entrenador el 4 de junio de 2024.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="tarjeta ficha">
+                    <div class="inicial" aria-hidden="true">SH</div>
+                    <h3>Sergio «Oveja» Hernández</h3>
+                    <p class="posicion">Entrenador</p>
+                    <p>Dirigió a la Selección en Beijing 2008, donde ganó la medalla de bronce.</p>
+                    <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="ficha-hernandez">Ver detalle</button>
+                    <div id="ficha-hernandez" hidden>
+                        <dl>
+                            <dt>Nació</dt>
+                            <dd>1 de noviembre de 1963, en Bahía Blanca.</dd>
+                            <dt>Clubes</dt>
+                            <dd>Estudiantes de Olavarría (1998–2002), Boca Juniors (2003–05), Peñarol de Mar del Plata (2007–13 y 2015–16), Brasília, Zaragoza y Flamengo (desde 2025).</dd>
+                            <dt>Títulos</dt>
+                            <dd>Seis ligas nacionales (2000, 2001, 2004, 2010, 2011 y 2012), dos Ligas de las Américas (2008 y 2010) y la Basketball Champions League Américas 2024–25.</dd>
+                            <dt>Con la Selección</dt>
+                            <dd>Entrenador entre 2005 y 2010: bronce en Beijing 2008, oro en el torneo Diamond Ball 2008 y quinto puesto en el Mundial 2010. Volvió entre 2015 y 2020: plata en el Campeonato FIBA Américas 2015, oro en los Panamericanos 2019 y plata en el Mundial 2019.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+            </div>
         </section>
+
+        <section id="fuentes" class="fuentes">
+            <h2>Fuentes</h2>
+            <p>Los datos de clubes, títulos y premios salen de las fichas de cada jugador en Wikipedia y de las notas periodísticas que figuran abajo.</p>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Manu_Gin%C3%B3bili" target="_blank" rel="noopener">Wikipedia: Manu Ginóbili</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Luis_Scola" target="_blank" rel="noopener">Wikipedia: Luis Scola</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Andr%C3%A9s_Nocioni" target="_blank" rel="noopener">Wikipedia: Andrés Nocioni</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Fabricio_Oberto" target="_blank" rel="noopener">Wikipedia: Fabricio Oberto</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Pepe_S%C3%A1nchez_(basketball)" target="_blank" rel="noopener">Wikipedia: Pepe Sánchez</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Alejandro_Montecchia" target="_blank" rel="noopener">Wikipedia: Alejandro Montecchia</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Carlos_Delfino" target="_blank" rel="noopener">Wikipedia: Carlos Delfino</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Hugo_Sconochini" target="_blank" rel="noopener">Wikipedia: Hugo Sconochini</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Walter_Herrmann" target="_blank" rel="noopener">Wikipedia: Walter Herrmann</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Rub%C3%A9n_Wolkowyski" target="_blank" rel="noopener">Wikipedia: Rubén Wolkowyski</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Gabriel_Fern%C3%A1ndez_(basketball)" target="_blank" rel="noopener">Wikipedia: Gabriel Fernández</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Leonardo_Guti%C3%A9rrez" target="_blank" rel="noopener">Wikipedia: Leonardo Gutiérrez</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Rub%C3%A9n_Magnano" target="_blank" rel="noopener">Wikipedia: Rubén Magnano</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Sergio_Hern%C3%A1ndez_(basketball)" target="_blank" rel="noopener">Wikipedia: Sergio Hernández</a></li>
+                <li><a href="https://espndeportes.espn.com/basquetbol/nba/nota/_/id/14095696/recuerdo-medalla-de-oro-atenas-2004-entrevista-hugo-sconochini" target="_blank" rel="noopener">ESPN Deportes: entrevista a Hugo Sconochini</a></li>
+                <li><a href="https://www.lanacion.com.ar/deportes/basquetbol/ruben-magnano-uno-de-los-autores-intelectuales-de-la-generacion-dorada-anuncio-que-dejara-de-nid04062024/" target="_blank" rel="noopener">La Nación: Rubén Magnano anunció que dejará de dirigir</a></li>
+            </ul>
+        </section>
+
     </main>
 
     <footer>
         <p>&copy; 2026 Generación Dorada. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>

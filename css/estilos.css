@@ -1,0 +1,533 @@
+/* estilos.css: hoja de estilos de todo el sitio.
+   Los colores y las tipografías están en variables (:root). Para cambiar la paleta
+   o las fuentes alcanza con modificar esos valores, el resto del archivo no se toca.
+
+   Inspiración: la camiseta celeste de la Selección, con el número y el nombre en azul marino.
+   Por eso los títulos usan una tipografía condensada, parecida al lettering de una camiseta. */
+
+:root {
+    --fondo: #FFFFFF;
+    --superficie: #EAF3FB;
+    --texto: #10233F;
+    --texto-suave: #4A5B73;
+    --principal: #75AADB;        /* header y footer: el celeste de la camiseta */
+    --sobre-principal: #0B1D33;  /* texto sobre header y footer: el azul marino de los números */
+    --acento: #D4A82A;           /* el dorado de la medalla: botones y franjas */
+    --sobre-acento: #0B1D33;     /* texto sobre el acento */
+    --borde: #C9D8E8;
+    --fuente: "Barlow", Arial, sans-serif;
+    --fuente-titulos: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente);
+    font-size: 1.0625rem;
+    color: var(--texto);
+    background-color: var(--fondo);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--texto);
+}
+
+/* Foco visible para navegar con teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--texto);
+    outline-offset: 2px;
+}
+
+/* Encabezado y menú: flexbox para poner el logo a la izquierda y el menú a la derecha.
+   La franja dorada de abajo recuerda a la medalla. */
+header {
+    background-color: var(--principal);
+    color: var(--sobre-principal);
+    border-bottom: 4px solid var(--acento);
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+}
+
+.logo {
+    color: inherit;
+    font-family: var(--fuente-titulos);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+}
+
+nav a {
+    color: var(--sobre-principal);
+    font-family: var(--fuente-titulos);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    padding: 0.25rem 0;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    border-bottom-color: var(--sobre-principal);
+}
+
+/* Contenido principal */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+main > section {
+    margin-bottom: 2.5rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    margin: 0 0 1rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin: 0 0 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+}
+
+h4 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.25rem;
+    margin: 1rem 0 0.25rem;
+}
+
+/* Presentación de la página de inicio */
+#inicio {
+    background-color: var(--superficie);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+}
+
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+/* Botones */
+.boton {
+    display: inline-block;
+    background-color: var(--acento);
+    color: var(--sobre-acento);
+    border: 2px solid var(--acento);
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-family: var(--fuente-titulos);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: var(--sobre-acento);
+    color: var(--acento);
+    border-color: var(--sobre-acento);
+}
+
+.boton-secundario {
+    background-color: transparent;
+    color: var(--texto);
+    border-color: var(--texto);
+}
+
+.boton-secundario:hover {
+    background-color: var(--texto);
+    color: var(--fondo);
+    border-color: var(--texto);
+}
+
+/* Línea de tiempo: lista ordenada con una línea dorada a la izquierda */
+.linea-tiempo {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0 0 0 1.25rem;
+    border-left: 4px solid var(--acento);
+}
+
+.linea-tiempo li {
+    margin-bottom: 1.25rem;
+}
+
+/* Los años usan la misma tipografía que los números de una camiseta */
+.anio {
+    display: block;
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* Torneos de la página de historia */
+.torneo {
+    border-top: 1px solid var(--borde);
+    padding: 1.25rem 0;
+}
+
+.torneo p {
+    margin: 0 0 0.75rem;
+}
+
+.boton-detalle {
+    font-family: var(--fuente-titulos);
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: var(--texto);
+    border: 2px solid var(--texto);
+    border-radius: 6px;
+    padding: 0.3rem 0.9rem;
+    cursor: pointer;
+}
+
+.boton-detalle:hover {
+    background-color: var(--texto);
+    color: var(--fondo);
+}
+
+/* Buscador de jugadores */
+.buscador {
+    margin-bottom: 1.5rem;
+}
+
+.buscador label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.buscador input {
+    width: 100%;
+    max-width: 24rem;
+    font-family: inherit;
+    font-size: 1.0625rem;
+    color: var(--texto);
+    background-color: var(--fondo);
+    border: 2px solid var(--texto-suave);
+    border-radius: 6px;
+    padding: 0.55rem 0.75rem;
+}
+
+.buscador p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: var(--texto-suave);
+}
+
+/* Tarjetas de jugadores y cuerpo técnico: grid que acomoda las columnas según el ancho */
+.lista-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1rem;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.tarjeta p {
+    margin: 0.25rem 0 0.75rem;
+    font-size: 1rem;
+}
+
+/* El botón queda siempre abajo: así las tarjetas de una misma fila tienen el mismo tamaño */
+.tarjeta .boton-detalle {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.tarjeta-jugador h3 {
+    min-height: 2.2em;
+}
+
+.tarjeta .posicion {
+    color: var(--texto-suave);
+    font-weight: 600;
+}
+
+/* Las iniciales van como el estampado de una camiseta: azul marino sobre celeste.
+   Reemplazan a la foto hasta que haya una. */
+.inicial {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.75rem;
+    border-radius: 6px;
+    background-color: var(--principal);
+    color: var(--sobre-principal);
+    font-family: var(--fuente-titulos);
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Eventos de la página de legado */
+.evento {
+    border-top: 1px solid var(--borde);
+    padding: 1.25rem 0;
+}
+
+/* Galería de fotos */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.galeria figure {
+    margin: 0;
+}
+
+.galeria img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9375rem;
+    color: var(--texto-suave);
+}
+
+.foto-pendiente {
+    min-height: 12rem;
+    border: 2px dashed var(--texto-suave);
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--texto-suave);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Datos rápidos de la página de inicio: número grande al estilo de un dorsal */
+.datos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dato {
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    border-top: 4px solid var(--acento);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.dato-numero {
+    display: block;
+    font-family: var(--fuente-titulos);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Fichas de jugadores: la lista de datos que se abre con el botón */
+.ficha dl {
+    margin: 0.75rem 0 0;
+    font-size: 1rem;
+}
+
+.ficha dt {
+    margin-top: 0.6rem;
+    font-family: var(--fuente-titulos);
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.ficha dd {
+    margin: 0.1rem 0 0;
+}
+
+/* Tabla de logros: el contenedor permite desplazar la tabla en pantallas chicas sin romper la página */
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+.tabla-logros {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.tabla-logros caption {
+    text-align: left;
+    padding-bottom: 0.5rem;
+    color: var(--texto-suave);
+}
+
+.tabla-logros th,
+.tabla-logros td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid var(--borde);
+}
+
+.tabla-logros thead th {
+    background-color: var(--principal);
+    color: var(--sobre-principal);
+    font-family: var(--fuente-titulos);
+    font-size: 1.125rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.tabla-logros tbody th {
+    font-family: var(--fuente-titulos);
+    font-size: 1.25rem;
+    white-space: nowrap;
+}
+
+.tabla-logros .resultado {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Fila de los resultados más importantes: franja dorada a la izquierda (además del texto, no solo color) */
+.tabla-logros .destacado th {
+    border-left: 4px solid var(--acento);
+}
+
+/* Imágenes y videos que acompañan al texto */
+.figura {
+    margin: 1rem 0;
+    max-width: 640px;
+}
+
+.figura img,
+.figura video {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Aclaración debajo del nombre del torneo en la tabla de logros */
+.nota {
+    display: block;
+    color: var(--texto-suave);
+    font-size: 0.9375rem;
+}
+
+/* Fuentes */
+.fuentes {
+    font-size: 1rem;
+}
+
+.fuentes li {
+    margin-bottom: 0.4rem;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--principal);
+    color: var(--sobre-principal);
+    border-top: 4px solid var(--acento);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    font-size: 0.9375rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Pantallas chicas: el header se apila y se achican los márgenes */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+    }
+
+    #inicio {
+        padding: 1.25rem 1rem;
+    }
+}
+
+/* Va al final para que el atributo hidden siempre oculte, aunque otra regla defina display (como .tarjeta) */
+[hidden] {
+    display: none;
+}

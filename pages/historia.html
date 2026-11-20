@@ -1,44 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Historia de la Generación Dorada: el básquet argentino antes de 2002, la racha de Estados Unidos y cada torneo, del Mundial 2002 al oro de Atenas 2004 y más allá.">
+    <title>Historia | Generación Dorada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/app.js" defer></script>
 </head>
 <body>
+
     <header>
-        <p>Generación Dorada</p>
-        <nav>
-            
+        <a class="logo" href="../index.html">Generación Dorada</a>
+        <nav aria-label="Principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="historia.html">Historia</a></li>
+                <li><a href="historia.html" aria-current="page">Historia</a></li>
+                <li><a href="logros.html">Logros</a></li>
                 <li><a href="jugadores.html">Jugadores</a></li>
-                <li><a href="legado.html">Logros</a></li>
+                <li><a href="legado.html">Legado</a></li>
                 <li><a href="galeria.html">Galería</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
+
         <section id="historia">
-            <h1>Historia</h1>
-            <p><!--Contexto antes de la generacion y como se formo-->
-            </p>
-    </section>
+            <h1>Historia de la Generación Dorada</h1>
+            <p>Esta página cuenta cómo el básquet argentino llegó a la élite mundial: de dónde venía, a quién tuvo que ganarle y qué pasó en cada torneo importante. Los resultados completos están en la página de <a href="logros.html">Logros</a>.</p>
+        </section>
 
-    <section id ="cronologia">
-        <h2>Cronología</h2>
-        <!--Mismo que con legado, ver como poner los torneos, sea por cards, o por  articles para cada uno explicando un resumen de cada torneo-->
-    </section>
+        <!-- Contexto: cómo estaba el básquet argentino antes de esta generación -->
+        <section id="contexto">
+            <h2>Antes de la Generación Dorada</h2>
 
-    <section id="logros-destacados">
-        <h2>Logros Destacados</h2>
-        <!--Poner los logros obtenidos-->
+            <article class="evento">
+                <h3>1950: el primer campeón del Mundo</h3>
+                <p>El primer Mundial de básquet de la FIBA se jugó en Buenos Aires, en el estadio Luna Park, entre el 22 de octubre y el 4 de noviembre de 1950, con diez selecciones. Argentina ganó los seis partidos que jugó y fue el único equipo invicto. Todos eran jugadores amateur: el gobierno les consiguió una licencia paga de 60 días para entrenar.</p>
+                <p>El partido decisivo fue contra Estados Unidos, que mandó a los Denver Chevrolets, un equipo de la liga AAU. Argentina ganó 64 a 50 el 3 de noviembre. Oscar Furlong fue el mejor jugador del torneo, y el capitán era Ricardo González. Según la leyenda, más de 20 mil personas llegaron a Luna Park y muchas no pudieron entrar.</p>
+            </article>
+
+            <article class="evento">
+                <h3>Después del título: Helsinki 1952 y una proscripción</h3>
+                <p>Dos años después del Mundial, en los Juegos Olímpicos de Helsinki 1952, Uruguay eliminó a Argentina en las semifinales y el equipo terminó cuarto. Ese fue el mejor resultado olímpico del básquet argentino hasta Atenas 2004.</p>
+                <p>En septiembre de 1955 un golpe militar derrocó a Perón y la nueva junta proscribió a los campeones de 1950: los acusó de haberse beneficiado con ventajas del gobierno anterior y los declaró profesionales. La prohibición se levantó diez años después, cuando la mayoría ya tenía más de treinta años. Durante décadas el título del 50 casi no se mencionó. Hoy a ese equipo se lo recuerda como la primera Generación Dorada.</p>
+            </article>
+
+            <article class="evento">
+                <h3>Un largo camino hasta 2002</h3>
+                <p>Después de aquel equipo, Argentina tardó mucho en volver a pelear arriba: no terminó mejor que sexta en un Mundial hasta 2002. Hubo señales de que algo se estaba armando: en los Juegos Panamericanos de Mar del Plata 1995, Argentina ganó la medalla de oro, con Fabricio Oberto y Rubén Wolkowyski en el plantel.</p>
+                <p>También hubo un golpe duro. En el Preolímpico de 1999, en Puerto Rico, el equipo terminó tercero y se quedó sin plaza para los Juegos de Sydney 2000. Dos años más tarde, con Rubén Magnano como entrenador y un grupo de jugadores jóvenes, llegó la reacción.</p>
+            </article>
+        </section>
+
+        <!-- El rival: por qué ganarle a Estados Unidos era tan difícil -->
+        <section id="estados-unidos">
+            <h2>El rival: Estados Unidos y la NBA</h2>
+            <p>Desde los Juegos de Barcelona 1992 los jugadores de la NBA pueden participar en los torneos de la FIBA. Estados Unidos aprovechó eso con el famoso Dream Team y, a partir de entonces, jugó cada torneo importante con estrellas de la NBA.</p>
+            <p>Cuando empezó el Mundial 2002, ese equipo llevaba 58 partidos seguidos sin perder. Nadie en el mundo había logrado ganarle a un equipo de Estados Unidos formado solo por jugadores de la NBA. Eso cambió el 4 de septiembre de 2002, en el Conseco Fieldhouse de Indianápolis.</p>
+            <p>Argentina ganó 87 a 80. Cerró el primer cuarto 34 a 21 y se fue al descanso 53 a 37. Manu Ginóbili hizo 15 puntos, Luis Scola 13 y Fabricio Oberto 11, con 9 rebotes. Del otro lado jugaban Paul Pierce, Reggie Miller, Michael Finley, Baron Davis, Andre Miller y Ben Wallace. Estados Unidos terminó ese Mundial sin medalla, con derrotas ante Argentina, Yugoslavia y España.</p>
+            <p>Dos años después, en la semifinal de Atenas 2004, Argentina le ganó de nuevo. Esa vez el rival buscaba su cuarto oro olímpico seguido desde Barcelona 1992.</p>
+        </section>
+
+        <!-- Un article por torneo: cada uno se entiende solo. El botón muestra u oculta el detalle (js/app.js) -->
+        <section id="cronologia">
+            <h2>Cronología, torneo por torneo</h2>
+
+            <article class="torneo">
+                <h3>2001, Neuquén: campeones de América</h3>
+                <p>Argentina ganó el Campeonato FIBA Américas en Neuquén, su primer título en esa competencia, y se clasificó al Mundial. Manu Ginóbili fue elegido el mejor jugador del torneo. Antes, ese mismo año, el equipo había ganado el Campeonato Sudamericano.</p>
+                <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="detalle-2001">Ver detalle</button>
+                <p id="detalle-2001" hidden>El equipo tenía nueve jugadores jóvenes y la meta para el Mundial del año siguiente era terminar entre los seis primeros. Rubén Magnano dirigía y Hugo Sconochini era el capitán.</p>
+            </article>
+
+            <article class="torneo">
+                <h3>Mundial 2002, Indianápolis: subcampeones</h3>
+                <p>Argentina fue la primera selección en vencer a un equipo de Estados Unidos formado solo por jugadores de la NBA. Llegó a la final y perdió con Yugoslavia 84 a 77 en tiempo suplementario.</p>
+                <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="detalle-2002">Ver detalle</button>
+                <p id="detalle-2002" hidden>El triunfo ante Estados Unidos se jugó en el Conseco Fieldhouse de Indianápolis. Ginóbili se lesionó durante el torneo y su baja se sintió en el final. Esa campaña cambió la forma en que el mundo veía al básquet argentino.</p>
+            </article>
+
+            <article class="torneo">
+                <h3>Juegos Olímpicos de Atenas 2004: oro</h3>
+                <p>Argentina venció a Estados Unidos 89 a 81 en la semifinal y a Italia 84 a 69 en la final, el 28 de agosto de 2004. Fue la primera medalla de oro olímpica del básquet argentino.</p>
+
+                <h4 id="palomita">La palomita de Ginóbili</h4>
+                <p>El camino al oro empezó el 15 de agosto de 2004 con una de las jugadas más famosas del deporte argentino. En el debut contra Serbia y Montenegro, Argentina perdía 82 a 81 y quedaban menos de cuatro segundos. Después de un tiro libre del rival, Andrés Nocioni sacó rápido, Alejandro Montecchia llevó la pelota hasta mitad de cancha y se la pasó a Manu Ginóbili. Marcado de cerca, Manu tiró una palomita que pegó en el tablero y entró: Argentina ganó 83 a 82.</p>
+                <figure class="figura">
+                    <img src="../img/jugada-palomita.svg" alt="Esquema de la cancha vista desde arriba: Nocioni saca desde el fondo, Montecchia lleva la pelota hasta la mitad de la cancha y pasa a Ginóbili, que tira la palomita cerca del aro rival.">
+                    <figcaption>Esquema ilustrativo de la jugada: no es una reproducción exacta de las posiciones.</figcaption>
+                </figure>
+                <!-- Para agregar el video: guardalo en la carpeta video/ y reemplazá el div "foto-pendiente" por
+                     <video controls src="../video/palomita.mp4"></video>
+                     (si es un archivo muy pesado, conviene comprimirlo antes de subirlo a GitHub) -->
+                <figure class="figura">
+                    <div class="foto-pendiente">Video pendiente</div>
+                    <figcaption>La palomita de Ginóbili ante Serbia y Montenegro, 15 de agosto de 2004.</figcaption>
+                </figure>
+
+                <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="detalle-2004">Ver detalle</button>
+                <p id="detalle-2004" hidden>El torneo no empezó fácil. En la primera fase Argentina ganó a Serbia y Montenegro 83 a 82 con la palomita de Ginóbili, perdió con España 87 a 76, ganó a China 82 a 57 y a Nueva Zelanda 98 a 94, y perdió con Italia 76 a 75. En los cuartos de final eliminó a Grecia. La semifinal fue el 27 de agosto: Ginóbili hizo 29 puntos, Argentina llegó al último cuarto con 13 de ventaja y la mantuvo. Del lado de Estados Unidos jugaban Tim Duncan, Allen Iverson, Lamar Odom y los jóvenes Dwyane Wade y LeBron James. Con ese resultado Argentina llegó por primera vez a una final olímpica de básquet, y la ganó contra Italia, con el mismo entrenador del Mundial 2002, Rubén Magnano. Hasta entonces, el mejor resultado olímpico del país era el cuarto puesto de Helsinki 1952.</p>
+            </article>
+
+            <article class="torneo">
+                <h3>Mundial 2006, Japón: cuarto puesto</h3>
+                <p>Argentina llegó a las semifinales, pero perdió con España y quedó afuera de la lucha por el oro. En el partido por el bronce, jugado el 2 de septiembre de 2006 en Saitama, Estados Unidos ganó 96 a 81.</p>
+                <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="detalle-2006">Ver detalle</button>
+                <p id="detalle-2006" hidden>En ese partido Dwyane Wade hizo 32 puntos para Estados Unidos, 18 de ellos en el último cuarto. Pepe Sánchez fue una de las figuras argentinas.</p>
+            </article>
+
+            <article class="torneo">
+                <h3>Juegos Olímpicos de Beijing 2008: bronce</h3>
+                <p>Argentina cayó en la semifinal con Estados Unidos y se recuperó en el partido por el bronce: venció a Lituania 87 a 75 el 24 de agosto de 2008. El entrenador era Sergio «Oveja» Hernández.</p>
+                <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="detalle-2008">Ver detalle</button>
+                <p id="detalle-2008" hidden>Fue la tercera gran medalla de la generación, después de la plata en el Mundial 2002 y del oro en Atenas 2004. Ese mismo año Argentina también ganó el torneo Diamond Ball. Hernández dirigió a la Selección entre 2005 y 2010.</p>
+            </article>
+        </section>
+
+        <!-- Lo que vino después: la generación siguió siendo protagonista -->
+        <section id="despues">
+            <h2>Después de Beijing: la generación sigue</h2>
+
+            <article class="torneo">
+                <h3>2011, Mar del Plata: otra vez campeones de América</h3>
+                <p>Con varios de los campeones olímpicos todavía en cancha, Argentina volvió a ganar el Campeonato FIBA Américas, esta vez jugando en Mar del Plata. Fabricio Oberto, que se había retirado en 2010, volvió para ese torneo.</p>
+            </article>
+
+            <article class="torneo">
+                <h3>Juegos Olímpicos de Londres 2012: cuarto puesto</h3>
+                <p>Argentina quedó tercera en su grupo después de perder 126 a 97 con Estados Unidos el 6 de agosto. En los cuartos de final eliminó a Brasil, pero volvió a perder con Estados Unidos en la semifinal, 109 a 83. En el partido por el bronce, el 12 de agosto, perdió con Rusia 81 a 77: había empatado en 64 con seis minutos por jugar.</p>
+                <button class="boton-detalle" type="button" aria-expanded="false" aria-controls="detalle-2012">Ver detalle</button>
+                <p id="detalle-2012" hidden>El equipo era dirigido por Julio Lamas, con Sergio Hernández como asistente. Buscaba su tercer podio olímpico consecutivo.</p>
+            </article>
+
+            <article class="torneo">
+                <h3>Mundial 2019, China: subcampeones otra vez</h3>
+                <p>Argentina volvió a una final del Mundo diecisiete años después de la primera y perdió con España 95 a 75. Luis Scola, de la Generación Dorada, seguía en el plantel, con Sergio Hernández como entrenador. Ese mismo año Argentina también ganó el oro en los Juegos Panamericanos de Lima.</p>
+            </article>
+        </section>
+
+        <section id="fuentes" class="fuentes">
+            <h2>Fuentes</h2>
+            <ul>
+                <li><a href="https://www.fiba.basketball/basketballworldcup/2023/news/the-best-of-fiba-basketball-world-cup-1950-argentina-first-night-of-the-torches-denver-chevrolets-and-20000-fans" target="_blank" rel="noopener">FIBA: el Mundial de 1950 en Buenos Aires</a></li>
+                <li><a href="https://buenosairesherald.com/sports/basketball/argentina-won-the-first-basketball-world-cup-75-years-ago-they-were-almost-erased-from-history" target="_blank" rel="noopener">Buenos Aires Herald: el título de 1950 y la proscripción de los campeones</a></li>
+                <li><a href="https://www.losandes.com.ar/mas-deportes/basquet-un-dia-como-hoy-pero-hace-18-anos-el-dream-team-dejo-de-ser-invencible" target="_blank" rel="noopener">Los Andes: el día en que el Dream Team dejó de ser invencible</a></li>
+                <li><a href="https://www.infobae.com/deportes/2022/09/04/se-cumplen-20-anos-de-la-generacion-dorada-la-genesis-de-un-grupo-unico-de-deportistas-que-dejaron-un-legado-mundial/" target="_blank" rel="noopener">Infobae: 20 años de la Generación Dorada</a></li>
+                <li><a href="https://www.britannica.com/topic/The-Argentine-Mens-Basketball-Team-Gold-for-the-Golden-Generation-1844190" target="_blank" rel="noopener">Britannica: la medalla de oro de la Generación Dorada</a></li>
+                <li><a href="https://www.lagaceta.com.ar/nota/1049109/deportes/se-cumplen-20-anos-historico-triunfo-generacion-dorada-sobre-dream-team.html" target="_blank" rel="noopener">La Gaceta: 20 años del triunfo sobre el Dream Team en Atenas 2004</a></li>
+                <li><a href="https://www.fiba.basketball/en/history/320-mens-olympic-basketball-tournament/2714/games" target="_blank" rel="noopener">FIBA: partidos del torneo olímpico de Atenas 2004</a></li>
+                <li><a href="https://www.espn.co.uk/olympics/wbc2006/news/story?id=2569890" target="_blank" rel="noopener">ESPN: Estados Unidos vence a Argentina por el bronce en 2006</a></li>
+                <li><a href="https://diariodecuyo.com.ar/pasiondeportiva/Argentina-dio-pelea-pero-perdio-ante-el-Dream-Team-20120806-0009.html" target="_blank" rel="noopener">Diario de Cuyo: Argentina ante Estados Unidos en Londres 2012</a></li>
+                <li><a href="https://www.diariodecuyo.com.ar/noticias/argentina-cayo-ante-rusia-y-se-quedo-sin-el-bronce-809054.html" target="_blank" rel="noopener">Diario de Cuyo: Argentina cayó ante Rusia y se quedó sin el bronce</a></li>
+                <li><a href="https://www.ellitoral.com/edicion-online/argentina-derroto-lituania-logro-bronce_0_ytq7TdxJyL.html" target="_blank" rel="noopener">El Litoral: Argentina ganó el bronce en Beijing 2008</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Argentina_national_basketball_team" target="_blank" rel="noopener">Wikipedia: selección argentina de básquet</a></li>
+            </ul>
+        </section>
+
     </main>
-    
+
     <footer>
         <p>&copy; 2026 Generación Dorada. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
