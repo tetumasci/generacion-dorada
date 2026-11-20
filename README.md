@@ -19,11 +19,11 @@ Publicado en https://tetumasci.github.io/generacion-dorada
 
 ```
 index.html
-pages/    páginas internas
-css/      estilos.css (colores y tipografía en variables al principio del archivo)
-js/       app.js (botones "Ver detalle" en Historia y Jugadores, y buscador en Jugadores)
-img/      fotos e ilustraciones del sitio
-video/    video propio del partido homenaje (el de la palomita está incrustado desde YouTube)
+pages/         páginas internas
+css/           estilos.css (colores y tipografía en variables al principio del archivo)
+js/            app.js (botones "Ver detalle" en Historia y Jugadores, y buscador en Jugadores)
+assets/img/    fotos e ilustraciones del sitio
+assets/video/  video propio del partido homenaje (el de la palomita está incrustado desde YouTube)
 ```
 
 ## Diseño
